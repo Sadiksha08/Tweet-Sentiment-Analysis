@@ -106,7 +106,7 @@ def app():
             #st.dataframe(df)
     
     # structure
-            st.write('**Strucure**')
+            st.write('**Structure**')
             oBuffer = io.StringIO()
             df.info(buf=oBuffer)
             vBuffer = oBuffer.getvalue()
