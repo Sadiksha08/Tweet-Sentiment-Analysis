@@ -160,7 +160,7 @@ def app():
             # change as required
             st.write("**Drop Column - tweet_id**")
             df = df.drop('tweet_id', axis=1)
-            st.text(df.head())
+            st.write(df.head())
             
             
             # Cleaning
@@ -192,19 +192,19 @@ def app():
             
             # remove all strip leading and trailing space
             df[txtVars] = df[txtVars].str.strip()
-            st.text(df[txtVars].head())
+            st.write(df[txtVars].head(10))
             
             # convert the tokens into lowercase: lower_tokens
             st.write('**Convert To Lower Case**')
             df[txtVars] = [t.lower() for t in df[txtVars]]
-            st.text(df[txtVars].head())
+            st.write(df[txtVars].head(10))
             
             # retain alphabetic words: alpha_only
             st.write('**Remove Punctuations & Digits**')
             import string
             df[txtVars] = [t.translate(str.maketrans('','','–01234567890')) for t in df[txtVars]]
             df[txtVars] = [t.translate(str.maketrans('','',string.punctuation)) for t in df[txtVars]]
-            st.text(df[txtVars].head())
+            st.write(df[txtVars].head(10))
             
             
             # remove all stop words
@@ -222,7 +222,7 @@ def app():
                 return (' '.join(lText))  
             # iterate
             df[txtVars] = [remStopWords(t) for t in df[txtVars]]
-            st.text(df[txtVars].head())
+            st.write(df[txtVars].head(10))
             
             
             # remove all bad words / pofanities ...
@@ -237,7 +237,7 @@ def app():
                 return (' '.join(lText))
             # iterate
             df[txtVars] = [remProfWords(t) for t in df[txtVars]]
-            st.text(df[txtVars].head())
+            st.write(df[txtVars].head())
             
             # remove application specific words
             st.write('**Remove App Specific Words**')
@@ -250,7 +250,7 @@ def app():
                 return (' '.join(lText))
             # iterate
             df[txtVars] = [remSpecWords(t) for t in df[txtVars]]
-            st.text(df[txtVars].head())
+            st.write(df[txtVars].head())
             
             # retain words with len > 3
             st.write('**Remove Short Words**')
@@ -261,7 +261,7 @@ def app():
                 return (' '.join(lText))
             # iterate
             df[txtVars] = [remShortWords(t) for t in df[txtVars]]
-            st.text(df[txtVars].head())
+            st.write(df[txtVars].head())
     
     
 ##############################################################
