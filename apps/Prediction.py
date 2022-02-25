@@ -399,17 +399,17 @@ def app():
         
         positive = df[df['Textblob PolarityResult sentiment']=="positive"]
         #print(str(positive.shape[0]/(df.shape[0])*100)+"% of positive tweets")
-        print("Percentage of positive tweets are {:0.2f}.".format(positive.shape[0]/(df.shape[0])*100))
+        st.write("Percentage of positive tweets are {:0.2f}.".format(positive.shape[0]/(df.shape[0])*100))
         pos = positive.shape[0]/df.shape[0]*100
         
         negative = df[df['Textblob PolarityResult sentiment']=="negative"]
         #print(str(negative.shape[0]/(df.shape[0])*100)+"% of negative tweets")
-        print("Percentage of negative tweets are {:0.2f}.".format(negative.shape[0]/(df.shape[0])*100))
+        st.write("Percentage of negative tweets are {:0.2f}.".format(negative.shape[0]/(df.shape[0])*100))
         neg = negative.shape[0]/df.shape[0]*100
         
         neutral = df[df['Textblob PolarityResult sentiment']=="neutral"]
         #print(str(neutral.shape[0]/(df.shape[0])*100)+"% of neutral tweets")
-        print("Percentage of neutral tweets are {:0.2f}.".format(neutral.shape[0]/(df.shape[0])*100))
+        st.write("Percentage of neutral tweets are {:0.2f}.".format(neutral.shape[0]/(df.shape[0])*100))
         neutral_2 = neutral.shape[0]/df.shape[0]*100
         
         explode = [0,0.1,0]
@@ -441,27 +441,27 @@ def app():
         
         Neutral = df[df['Textblob SubjectivityResult sentiment']=="Neutral"]
         #print(str(Neutral.shape[0]/(df.shape[0])*100)+"% of Neutral tweets")
-        print("Percentage of Neutral tweets are {:0.2f}.".format(Neutral.shape[0]/(df.shape[0])*100))
+        st.write("Percentage of Neutral tweets are {:0.2f}.".format(Neutral.shape[0]/(df.shape[0])*100))
         Neutral_new = Neutral.shape[0]/df.shape[0]*100
         
         Objective = df[df['Textblob SubjectivityResult sentiment']=="Objective"]
         #print(str(Objective.shape[0]/(df.shape[0])*100)+"% of Objective tweets")
-        print("Percentage of Objective tweets are {:0.2f}.".format(Objective.shape[0]/(df.shape[0])*100))
+        st.write("Percentage of Objective tweets are {:0.2f}.".format(Objective.shape[0]/(df.shape[0])*100))
         Objective = Objective.shape[0]/df.shape[0]*100
         
         Subjective = df[df['Textblob SubjectivityResult sentiment']=="Subjective"]
         #print(str(Subjective.shape[0]/(df.shape[0])*100)+"% of Subjective tweets")
-        print("Percentage of Subjective tweets are {:0.2f}.".format(Subjective.shape[0]/(df.shape[0])*100))
+        st.write("Percentage of Subjective tweets are {:0.2f}.".format(Subjective.shape[0]/(df.shape[0])*100))
         Subjective = Subjective.shape[0]/df.shape[0]*100
         
         Very_Objective = df[df['Textblob SubjectivityResult sentiment']=="Very Objective"]
         #print(str(Very_Objective.shape[0]/(df.shape[0])*100)+"% of Very_Objective tweets")
-        print("Percentage of Very_Objective tweets are {:0.2f}.".format(Very_Objective.shape[0]/(df.shape[0])*100))
+        st.write("Percentage of Very_Objective tweets are {:0.2f}.".format(Very_Objective.shape[0]/(df.shape[0])*100))
         Very_Objective = Very_Objective.shape[0]/df.shape[0]*100
         
         Very_Subjective = df[df['Textblob SubjectivityResult sentiment']=="Very Subjective"]
         #print(str(Very_Subjective.shape[0]/(df.shape[0])*100)+"% of Very_Subjective tweets")
-        print("Percentage of Very_Subjective tweets are {:0.2f}.".format(Very_Subjective.shape[0]/(df.shape[0])*100))
+        st.write("Percentage of Very_Subjective tweets are {:0.2f}.".format(Very_Subjective.shape[0]/(df.shape[0])*100))
         Very_Subjective = Very_Subjective.shape[0]/df.shape[0]*100
         
         explode = [0.1, 0, 0, 0, 0]
@@ -494,32 +494,32 @@ def app():
         
         angry = df[df['emotionResult']=="angry"]
         #print(str(angry.shape[0]/(df.shape[0])*100)+"% of angry tweets")
-        print("Percentage of angry tweets are {:0.2f}.".format(angry.shape[0]/(df.shape[0])*100))
+        st.write("Percentage of angry tweets are {:0.2f}.".format(angry.shape[0]/(df.shape[0])*100))
         angry = angry.shape[0]/df.shape[0]*100
         
         fear = df[df['emotionResult']=="fear"]
         #print(str(fear.shape[0]/(df.shape[0])*100)+"% of fear tweets")
-        print("Percentage of fear tweets are {:0.2f}.".format(fear.shape[0]/(df.shape[0])*100))
+        st.write("Percentage of fear tweets are {:0.2f}.".format(fear.shape[0]/(df.shape[0])*100))
         fear = fear.shape[0]/df.shape[0]*100
         
         happy = df[df['emotionResult']=="happy"]
         #print(str(happy.shape[0]/(df.shape[0])*100)+"% of happy tweets")
-        print("Percentage of happy tweets are {:0.2f}.".format(happy.shape[0]/(df.shape[0])*100))
+        st.write("Percentage of happy tweets are {:0.2f}.".format(happy.shape[0]/(df.shape[0])*100))
         happy = happy.shape[0]/df.shape[0]*100
         
         Neutral = df[df['emotionResult']=="Neutral"]
         #print(str(Neutral.shape[0]/(df.shape[0])*100)+"% of Neutral tweets")
-        print("Percentage of Neutral tweets are {:0.2f}.".format(Neutral.shape[0]/(df.shape[0])*100))
+        st.write("Percentage of Neutral tweets are {:0.2f}.".format(Neutral.shape[0]/(df.shape[0])*100))
         Neutral_emotion = Neutral.shape[0]/df.shape[0]*100
         
         sad = df[df['emotionResult']=="sad"]
         #print(str(sad.shape[0]/(df.shape[0])*100)+"% of sad tweets")
-        print("Percentage of sad tweets are {:0.2f}.".format(sad.shape[0]/(df.shape[0])*100))
+        st.write("Percentage of sad tweets are {:0.2f}.".format(sad.shape[0]/(df.shape[0])*100))
         sad = sad.shape[0]/df.shape[0]*100
         
         surprise = df[df['emotionResult']=="surprise"]
         #print(str(surprise.shape[0]/(df.shape[0])*100)+"% of surprise tweets")
-        print("Percentage of surprise tweets are {:0.2f}.".format(surprise.shape[0]/(df.shape[0])*100))
+        st.write("Percentage of surprise tweets are {:0.2f}.".format(surprise.shape[0]/(df.shape[0])*100))
         surprise = surprise.shape[0]/df.shape[0]*100
         
         explode = [0, 0, 0, 0.1, 0, 0]
