@@ -81,7 +81,7 @@ def app():
     
     if st.button("Analyze"):
     
-        tweets = tweepy.Cursor(api.search_tweets, q=keyword, lang ="en", tweet_mode="extended").items(noOfTweet)
+        tweets = tweepy.Cursor(api.search_tweets, q=keyword, lang ="en", tweet_mode="extended", wait_on_rate_limit=True, wait_on_rate_limit_notify=True).items(noOfTweet)
         
         df = pd.DataFrame([tweet.full_text for tweet in tweets], columns=['Tweets'])
     
